@@ -1,0 +1,38 @@
+/*******************************************************************************************************
+03)Faça um programa para pagamento de comissão de vendedores de peças, levando-se em consideração que sua
+comissão será de 5% do total da venda e que você tem os seguintes dados:
+- Identificação do vendedor
+- Código da peça
+- Preço unitário da peça
+- Quantidade vendida
+********************************************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 03</h3>
+    <form name="FormComissao" action=" " method="post">
+        Nome do Vendedor: <input type="text" name="f_nome" /><p></p>
+        Codigo da Peça: <input type="text" name="f_cdgpeca" /><p></p>
+        Preço unitário da Peça: <input type="text" name="f_peca" /><p></p>
+        Quantidade vendida: <input type="text" name="f_qtd" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    
+    <script>
+        function executar(){   
+        //var entrada
+        var nome = (document.FormComissao.f_nome.value);
+        var preco = parseFloat(document.FormComissao.f_peca.value);
+        var qtd = parseInt(document.FormComissao.f_qtd.value);
+        //calculo 
+        var calculo = (( qtd * preco) * 0.05).toFixed(2);
+        //print na tela
+        window.alert("Olá " + nome + " A comissão sobre suas vendas foram de R$: " + calculo);
+        //console.log(calculo);
+            
+        }     
+    </script>
+</body>
+</html>
