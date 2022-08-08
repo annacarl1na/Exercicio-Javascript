@@ -1,0 +1,35 @@
+
+/*************************************************************************
+2) Faça um programa que:
+- Leia a cotação do dólar
+- Leia um valor em dólares
+- Converta esse valor para Real
+- Mostre o resultado
+*************************************************************************/
+<head>
+</head>
+<body>
+    <h3>Exercício 02</h3>
+    <form name="FormDolar" action=" " method="post">
+        Cotação Do Dólar: <input type="number"  name="f_cotacao"  step="0.01" pattern="[0-1]"/><p></p>
+        Qtd: <input type="text" name="f_valordol" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    
+    <script>
+        function executar(){   
+        //cotação do dolar
+        var cotacao = parseFloat(document.FormDolar.f_cotacao.value);
+        var valordol = parseFloat(document.FormDolar.f_valordol.value);
+        
+       //calculo estoque médio
+        var conversao = (cotacao * valordol).toFixed(2);
+        //print na tela
+        window.alert("Você tem R$: " + conversao);
+        //consolo.log(estoquemedio);
+            
+        }     
+    </script>
+</body>
+</html>
