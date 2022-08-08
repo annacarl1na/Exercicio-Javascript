@@ -1,0 +1,29 @@
+1) Faça um programa para calcular o estoque médio de uma peça, sendo que:
+ESTOQUE MÉDIO = (QUANTIDADE_MÍNIMA + QUANTIDADE_MÁXIMA) / 2.
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 01</h3>
+    <form name="FormEstoque" action=" " method="post">
+        estoqueminimo: <input type="text" name="f_minimo" /><p></p>
+        estoquemaxima: <input type="text" name="f_maxima" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    
+    <script>
+        function executar(){   
+        
+        var estoqueminimo = parseInt(document.FormEstoque.f_minimo.value);
+        var estoquemaxima = parseInt(document.FormEstoque.f_maxima.value);
+        //calculo estoque médio
+        var estoquemedio = ( estoqueminimo + estoquemaxima) / 2 ;
+        //print na tela
+        window.alert(estoquemedio);
+        //console.log(estoquemedio);
+            
+        }     
+    </script>
+</body>
+</html>
