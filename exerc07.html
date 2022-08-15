@@ -1,0 +1,32 @@
+/*************************************************************************
+7) Ler uma temperatura em graus Fahrenheit e apresentá-Ia convertida em graus Celsius. A fórmula de conversão de
+temperatura a ser utilizada é C = (F - 32) * 5 / 9, em que a variável F é a temperatura em graus Fahrenheit e a
+variável C é a temperatura em graus Celsius.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 07</h3>
+    <form name="FormTemp" action=" " method="post">
+        Temperatura °F: <input type="text" name="f_grau" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+        var f = parseFloat(document.FormTemp.f_grau.value);
+
+       //processamento
+       var c = ((f - 32) * 5/9).toFixed(1);
+        
+        //saída
+        window.alert("Temperatura convertida para Celsius: " + c + "°C");
+
+        //consolo.log(estoquemedio);
+            
+        }     
+    </script>
+</body>
+</html>

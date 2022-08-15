@@ -1,0 +1,111 @@
+/*************************************************************************
+13) Escreva um programa que leia 3 números inteiros e imprima na tela os valores em ordem decrescente.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 13</h3>
+    <form name="FormVal" action=" " method="post">
+        Número 1=  <input type="text" name="f_numb1" /><p></p>
+        Número 2=  <input type="text" name="f_numb2" /><p></p>
+        Número 3=  <input type="text" name="f_numb3" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    
+    <script>
+        function executar(){   
+        //entrada
+
+        var numb1 = parseFloat(document.FormVal.f_numb1.value);
+        var numb2 = parseFloat(document.FormVal.f_numb2.value);
+        var numb3 = parseFloat(document.FormVal.f_numb3.value);
+        
+        let maior, menor, meio 
+       //processamento 
+
+       if(numb1 > numb2 && numb1 > numb3){
+            maior = numb1;
+                if(numb2 < numb3){
+                     menor = numb2;
+                     meio = numb3;
+                }else{
+                    menor = numb3;
+                    meio = numb2;
+                }
+        } else if (numb1 < numb2 && numb1 < numb3){
+                    menor = numb1;
+                if(numb2 > numb3){
+                    maior = numb2;
+                    meio = numb3;
+                }else{
+                    maior = numb3;
+                    meio = numb2;
+                }
+
+        }else {
+            meio = numb1;
+        }
+        window.alert(maior + ", "+ meio + ", "+ menor +".");
+
+    }
+</script>
+</body>
+</html>
+
+//codigo feito pelo professor em aula
+                var A = parseInt(document.FormExerc.f_valorA.value);
+                var B = parseInt(document.FormExerc.f_valorB.value);
+                var C = parseInt(document.FormExerc.f_valorC.value);
+                // valores iguais
+                if(A==B && B==C){
+                    window.alert(A + ", " + B + ", " + C);
+                }
+                // dois forem iguais e um diferente
+                else if(A==B && C!=A){
+                        if(A>C){
+                            window.alert(A + ", " + B + ", " + C);
+                        }else{
+                            window.alert(C + ", " + A + ", " + B);
+                        }
+                }
+                else if(B==C && A!=B){
+                        if(B>A){
+                            window.alert(B + ", " + C + ", " + A);
+                        }else{
+                            window.alert(A + ", " + B + ", " + C);
+                        }
+                }
+                else if(C==A && B!=C){
+                        if(C>B){
+                            window.alert(C + ", " + A + ", " + B);
+                        }else{
+                            window.alert(B + ", " + C + ", " + A);
+                        }
+                }
+                // todos diferentes
+                else if(A>B && A>C){
+                        if(B>C){
+                            window.alert(A + ", " + B + ", " + C);
+                        }
+                        else{
+                            window.alert(A + ", " + C + ", " + B);
+                        }
+                }
+                else if(B>A && B>C){
+                        if(A>C){
+                            window.alert(B + ", " + A + ", " + C);
+                        }else{
+                            window.alert(B + ", " + C + ", " + A);
+                        }
+                }
+                else if(C>A && C>B){
+                        if(B>A){
+                            window.alert(C + ", " + B + ", " + A);
+                        }
+                        else{
+                            window.alert(C + ", " + A + ", " + B);
+                        }
+                }
+                }

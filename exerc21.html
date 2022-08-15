@@ -1,0 +1,35 @@
+/*************************************************************************
+21) Faça um programa que leia um número inteiro e mostre uma mensagem na tela indicando se este número é positivo
+ou negativo. Pare a execução do programa quando o usuário requisitar.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 21</h3>
+    <form name="FormExerc" action=" " method="post">
+        Número: <input type="text" name="f_n1" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+    //entrada 3 lados de um triangulo
+    var num1 = parseInt(document.FormExerc.f_n1.value);
+    //processamento
+    while(num1 > 0){
+        window.alert("O "+num1+" é positivo.");
+        num1 = window.prompt("Digite o valor ou x para sair.");
+    }
+    while( num1 < 0){
+            window.prompt("O "+num1+" é negativo.");
+            num1 = window.prompt("Digite o valor ou x para sair.");
+    }
+    while( num1 = "x"){
+        window.alert("Saindo")
+        break;
+    }
+    }
+</script>
+</body>
+</html>

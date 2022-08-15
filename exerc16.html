@@ -1,0 +1,42 @@
+/*************************************************************************
+16) Escreva um programa que leia dois números e exiba mensagem informando o valor do maior número e o valor do
+menor número. Se os dois números forem iguais, o programa deve exibir mensagem informando este fato.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 16</h3>
+    <form name="FormExerc" action=" " method="post">
+        Número 1=  <input type="text" name="f_n1" /><p></p>
+        Número 2=  <input type="text" name="f_n2" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+    var n1 = parseFloat(document.FormExerc.f_n1.value);
+    var n2 = parseFloat(document.FormExerc.f_n2.value);
+    let maior, menor
+         //processamento
+         if(n1>n2){
+             maior = n1; 
+             menor = n2;
+            window.alert("O valor do maior número é: " + maior + "\n O valor do menor número é: " + menor);
+             
+            }
+            else if(n2>n1){
+               maior = n2;
+               menor = n1;
+            window.alert("O valor no maior número é: " + maior + "\n O valor do menor número é: " + menor);
+            }
+            else if( n1 == n2){
+                window.alert("Os numeros são iguais.");
+            }else{
+
+            }
+        }
+</script>
+</body>
+</html>

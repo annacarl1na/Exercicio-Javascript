@@ -1,0 +1,36 @@
+/*************************************************************************
+22) Faça um programa que leia um número. Se positivo armazene-o em A, se for negativo, em B. No final mostrar o
+resultado.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 22</h3>
+    <form name="FormExerc" action=" " method="post">
+        Número: <input type="text" name="f_n1" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+    //entrada 3 lados de um triangulo
+    var num1 = parseInt(document.FormExerc.f_n1.value);
+    //processamento
+    while(num1 > 0){
+        window.alert("A = "+num1); //Se positivo armazene-o em A
+        num1 = window.prompt("Digite um novo valor ou x para sair.");
+        
+    }
+    while( num1 < 0){
+            window.prompt("B = "+num1); //se for negativo, em B.
+            num1 = window.prompt("Digite um novo valor ou x para sair.");
+    }
+    while( num1 = "x"){
+        window.alert("saindo")
+        break;
+    }
+    }
+</script>
+</body>
+</html>

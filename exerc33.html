@@ -1,0 +1,19 @@
+/*************************************************************************
+33) Escreva um programa que calcule e exiba a média da nota dos alunos de uma turma em uma prova. O número de
+alunos é desconhecido. Os dados de um aluno são: número de matrícula e a sua nota na prova em questão.
+
+*************************************************************************/
+<h3>Exercício 33</h3> 
+<script>
+i = 0
+media = 0
+media_geral = 0
+do{   
+  var matricula = window.prompt("Entre com a matricula")
+    media = parseFloat(window.prompt("Entre com a media"))
+    media_geral = (media_geral + media)
+  var fim = window.confirm("Inserir mais um aluno? ")
+    ++i
+}while (fim != false)
+  window.alert("A media final do(s) " + i + " aluno(s)  foi de:  " + (media_geral / i).toFixed(1))
+</script>

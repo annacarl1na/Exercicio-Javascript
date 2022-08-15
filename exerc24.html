@@ -1,0 +1,51 @@
+/*************************************************************************
+24) Escreva um programa que leia dois números inteiros e apresente as opções para usuário escolher o que deseja
+realizar:
+1 – Verificar se um dos números lidos é ou não múltiplo do outro
+2 – Verificar se os dois números lidos são pares
+3 – Verificar se a média dos dois números é maior ou igual a 7.
+4 – Sair
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+<h3>Exercício 24</h3>
+<form name="calcform" method="post" action="">
+   <label for="valor1">Número 1:</label>
+   <input type="text" name="valor1" id="valor1" /><br><br>
+   
+   <label for="valor2">Número 2:</label>
+   <input type="text" name="valor2" id="valor2" /><br><br>
+
+   <label for="oper">Selecione a operação:</label>
+      <select name="oper" id="oper"><br>
+         <option value="multiplos"><strong>É ou não múltiplo do outro? </strong></option>
+         <option value="pares"><strong>Os dois números lidos são pares?</strong></option>
+         <option value="media"><strong>A média dos dois números é maior ou igual a 7?</strong></option>
+      </select><br><br>
+   <label for="res">Resultado:</label>
+   <input type="text" name="res" id="res" />
+   <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcform.oper.value)"/>
+</form>
+<script>
+   function calcular(oper) {
+      var valor1 = document.calcform.valor1.value;
+      var valor2 = document.calcform.valor2.value;
+   if (oper == "multiplos") {
+      var res = valor1%valor2==0 || valor2%valor1==0;
+   }else {
+      if (oper == "pares") {
+         var res = valor1%2 ==0 && valor2%2==0;
+      }  else {
+      if (oper == "media") {
+         var res = (valor1+valor2)/2 >= 7
+      }  else {
+         var res = "numero invalido";
+         }
+      }
+   }  document.calcform.res.value = res;
+}
+</script>
+</body>
+</html>

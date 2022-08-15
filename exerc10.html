@@ -1,0 +1,40 @@
+/*************************************************************************
+10) Escrever um programa que leia dois números inteiros e mostre todos os relacionamentos de ordem existentes entre
+eles. Os relacionamentos possíveis são: Igual, Não igual, Maior, Menor, Maior ou igual, Menor ou igual.
+
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 10</h3>
+    <form name="FormInt" action=" " method="post">
+        Valor 1:<input type="text" name="f_v1" /><p></p>
+        Valor 2:<input type="text" name="f_v2" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+        var v1= parseInt(document.FormInt.f_v1.value);
+        var v2 = parseInt(document.FormInt.f_v2.value);
+        var t = "";
+
+        //processamento
+       if(v1 > v2){
+           t = "V1 é maior que V2";
+       } else if(v1 < v2){
+           t = "V1 é menor que V2";
+       } else{
+           t = "Valores são iguais";
+       }
+        
+        //saída
+        window.alert(t);
+        console.log(t)
+    }
+             
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/*************************************************************************
+32) Escreva um programa que calcule e exiba a soma dos quadrados dos 20 primeiros números inteiros positivos
+ímpares a partir do número informado pelo usuário menor que 10 e maior que zero.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+<h3>Exercício 32</h3>  
+<script>
+contimpar = 0;
+somaquadimpar = 0;
+msg="";
+while(contimpar<20){
+var a = parseInt(window.prompt('Digite um valor maior que zero e menor que 10'));
+if(a>0 && a<10){
+if(a%2==1){
+    contimpar++;
+    msg = msg + a + " + ";
+    somaquadimpar = somaquadimpar + (a*a);
+    }
+}
+}alert(msg + " = " + somaquadimpar + "contimpar " + contimpar);
+</script> 
+</body>

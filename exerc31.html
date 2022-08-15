@@ -1,0 +1,32 @@
+/*************************************************************************
+31) Escrever um programa que leia um conjunto de números positivos, e exiba se o número lido é par ou ímpar. Exiba
+ao final a soma total dos números pares lidos e também a soma dos números ímpares lidos. Suporemos que o
+número de elementos deste conjunto não é conhecido, e que um número negativo será utilizado para sinalizar o fim
+dos dados.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+<h3>Exercício 31</h3>  
+<script>
+/* Escrever um programa que leia um conjunto de números positivos, e exiba se o número lido é par ou ímpar. Exiba ao final a soma total dos números pares lidos e também a soma dos números ímpares lidos. Suporemos que o
+número de elementos deste conjunto não é conhecido, e que um número negativo será utilizado para sinalizar o fim dos dados. */
+var somaimpares = 0, somapares = 0;
+do{
+var N = parseInt(prompt());
+    if(N<0){
+        break;
+        console.log(N)
+    } if(N%2 == 0){
+        //é par!
+            somapares = somapares + N;
+    }
+    else if(N%2 == 1){
+        //é impar!
+        somaimpares = somaimpares + N;
+    }}while(N>=0);
+alert("Mano, a soma do pares = " + somapares + "\ne a soma dos ímpares = " + somaimpares);
+</script>
+</body>
+</html>

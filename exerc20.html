@@ -1,0 +1,52 @@
+/*************************************************************************
+20) Escrever um programa declarando três variáveis do tipo inteiro (a, b e c). Ler um valor maior que zero para cada
+variável (se o valor digitado não é válido, mostrar mensagem e ler novamente). Exibe o menor valor lidomultiplicado
+pelo maior e o maior valor dividido pelo menor.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 20</h3>
+<script>
+do{var a = parseInt(window.prompt('Valor A: ' , 'Digite um valor maior que zero.'));
+} while(a <= 0); 
+    window.alert("valeu");
+do{ var b = parseInt(window.prompt('Valor B: ' , 'Digite um valor maior que zero.'));
+} while(b <= 0); 
+    window.alert("valeu");
+do{var c = parseInt(window.prompt('Valor C: ' , 'Digite um valor maior que zero.'));
+}while(c <= 0); 
+window.alert("valeu");
+var maior = 0; menor = 0; meio = 0; 
+       //processamento 
+
+       if(a > b && a > c){
+            maior = a;
+                if(b < c){
+                     menor = b;
+                     meio = c;
+                }else{
+                    menor = c;
+                    meio = b;
+                }
+        } else if (a < b && a < c){
+                    menor = a;
+                if(b > c){
+                    maior = b;
+                    meio = c;
+                }else{
+                    maior = c;
+                    meio = b;
+                }
+
+        }else {
+            meio = a;
+        }
+    var calculo = (menor * maior);
+    var calculo2 = (maior / menor);
+window.alert(a +"-"+b+"-"+c +"\nMenor valor * pelo maior =" + calculo + "\nMaior valor / pelo menor =" +calculo2);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/*************************************************************************
+15) Escreva um programa que leia quatro notas escolares de um aluno e apresentar uma mensagem que o aluno foi
+aprovado se o valor da média escolar for maior ou igual a 7. Se o valor da média for menor que 7, solicitar a nota
+do recuperação, somar com o valor da média e obter a nova média. Se a nova média for maior ou igual a 7,
+apresentar uma mensagem informando que o aluno foi aprovado na recuperação. Se o aluno não foi aprovado,
+apresentar uma mensagem informando esta condição. Apresentar junto com as mensagens o valor da média do
+aluno.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 14</h3>
+    <form name="FormExerc" action=" " method="post">
+        Nota 1=  <input type="text" name="f_nota1" /><p></p>
+        Nota 2=  <input type="text" name="f_nota2" /><p></p>
+        Nota 3=  <input type="text" name="f_nota3" /><p></p>
+        Nota 4=  <input type="text" name="f_nota4" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+    var n1 = parseFloat(document.FormExerc.f_nota1.value);
+    var n2 = parseFloat(document.FormExerc.f_nota2.value);
+    var n3 = parseFloat(document.FormExerc.f_nota3.value);
+    var n4 = parseFloat(document.FormExerc.f_nota4.value);
+    var n5 = parseFloat();
+    var media = ((n1 + n2 + n3 + n4) / 4);
+    var media2 = parseFloat();
+        //processamento
+        if(media >= 7){
+             window.alert("Aluno aprovado com a média de:" +media);
+            }else if(media < 7){
+               n5 = +window.prompt("Insira a nota de recuperacão= ");
+               media2 = (media + n5) / 2;
+            } if (media2 >= 7){
+                window.alert("Aluno aprovado com a nota de recuperação e média de:" +media2);
+            }else if(media2 < 7){
+                window.alert("Aluno Reprovado");
+            } else{
+
+            }
+        
+    }
+</script>
+</body>
+</html>

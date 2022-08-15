@@ -1,0 +1,33 @@
+/*************************************************************************
+17) Escreva um programa que leia um número inteiro. Verificar por meio de condição se o valor fornecido está na faixa
+entre 0 (zero) e 9 (nove). Caso o valor fornecido esteja dentro da faixa, apresentar a mensagem “valor válido”. Caso
+contrário, apresentar a mensagem “valor inválido”.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 17</h3>
+    <form name="FormExerc" action=" " method="post">
+        Número:  <input type="text" name="f_n1" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+    var n1 = parseInt(document.FormExerc.f_n1.value);
+         //processamento
+         if(n1 < 9 && n1 >= 0){
+             window.alert("Valor válido");
+             
+            }
+            else{
+                window.alert("Valor inválido");
+            }
+
+        }
+
+</script>
+</body>
+</html>

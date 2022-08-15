@@ -1,0 +1,47 @@
+/*************************************************************************
+37) Faça um programa de conversão de base numérica. O programa deverá apresentar uma tela de entrada com as
+seguintes opções:
+1 – Adição
+2 – Subtração
+3 – Multiplicação
+4 – Divisão
+Informe a opção:
+A partir da opção escolhida, o programa deverá solicitar para que o usuário digite dois números. Em seguida, o
+programa deve exibir o resultado da opção indicada pelo usuário e perguntar ao usuário se ele deseja voltar ao
+menu principal. Caso a resposta seja  ́S ́ ou  ́s ́, deverá voltar ao menu, caso contrário deverá encerrar o programa.
+*************************************************************************/
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Exercício 37</h3> 
+<script>
+do{ 
+  let result;
+  const operator = prompt('Escolha uma operação (+, -, * ou / ): ');
+  const number1 = parseFloat(prompt('Entre com o primeiro número: '));
+  const number2 = parseFloat(prompt('Entre com o segundo número:'));
+switch(operator){
+  case '+':
+    result = number1 + number2;
+    window.alert(`${number1} + ${number2} = ${result}`);
+    break;
+  case '-':
+    result = number1 - number2;
+    window.alert(`${number1} - ${number2} = ${result}`);
+    break;
+  case '*':
+    result = number1 * number2;
+    window.alert(`${number1} * ${number2} = ${result}`);
+    break;
+  case '/':
+    result = number1 / number2;
+    window.alert(`${number1} / ${number2} = ${result}`);
+    break;
+  default:window.alert('Operador Inválido');
+    break;
+  }
+var fim = window.prompt("Deseja voltar ao menu principal? (s/S)")
+} while(fim == 's' || fim == 'S')
+</script>
+</body>
+</html

@@ -1,0 +1,27 @@
+/*************************************************************************
+42) Faça um programa que determine o maior e o menor entre N números lidos. A condição de parada é a entrada de
+um valor 0, ou seja, o programa deve ficar executando até que a entrada seja igual a 0 (ZERO).
+*************************************************************************/
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 42</title>
+</head>
+<body>
+<script>
+    n = Number(prompt("Digite um número: " , "Para finalizar digite 0"));
+    var meuarray = new Array (0);
+while(n > 0){
+        meuarray.push(n);
+        n = Number(prompt("Digite um número: " , "Para finalizar digite 0"));
+    }
+        var min = meuarray.map(Number).reduce(function(a, b) {return Math.min(a, b);});
+        var max = meuarray.map(Number).reduce(function(a, b) {return Math.max(a, b);});
+    document.write("O menor número é: " + min + "." + "<br>" + 
+                    " O maior número é: " + max + ".");
+</script>
+</body>
+</html>

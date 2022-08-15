@@ -1,0 +1,34 @@
+/*************************************************************************
+9) Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa
+pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 09</h3>
+    <form name="FormIdade" action=" " method="post">
+        Anos:<input type="text" name="f_anos" /><p></p>
+        Meses:<input type="text" name="f_meses" /><p></p>
+        Dias: <input type="text" name="f_dias" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+        var anos = parseInt(document.FormIdade.f_anos.value);
+        var meses = parseInt(document.FormIdade.f_meses.value);
+        var dias = parseInt(document.FormIdade.f_dias.value);
+
+        //processamento
+        var calcanos = (anos * 365);
+        var calcmeses = (meses * 30);
+        var calculo = calcanos + calcmeses + dias;
+        
+        //saída
+        window.alert("Idade expressa apenas em dias: " + calculo);
+        }     
+    </script>
+</body>
+</html>

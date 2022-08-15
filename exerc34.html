@@ -1,0 +1,24 @@
+/*************************************************************************
+34) Escreva um programa que leia um conjunto de números positivos e exiba o menor e o maior. Suporemos que o
+número de elementos deste conjunto não é conhecido, e que um número negativo será utilizado para sinalizar o fim
+dos dados.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+<h3>Exercício 34</h3>
+<script>
+var qtd = parseFloat(window.prompt("Digite o valor: ","Para finalizar digite um número negativo"));
+var meuarray = new Array (0);
+while(qtd > 0){
+    meuarray.push(qtd);
+    qtd = parseFloat(window.prompt("Digite o valor: ","Para finalizar digite um nro negativo"));
+}
+    var min = meuarray.map(Number).reduce(function(a, b) {return Math.min(a, b);});
+    var max = meuarray.map(Number).reduce(function(a, b) {return Math.max(a, b);});
+    document.write("O menor número é: " + min + "." + "<br>" +
+                    "O maior número é: " + max + ".");
+</script>
+</body>
+</html>

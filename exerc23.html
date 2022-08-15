@@ -1,0 +1,57 @@
+/*************************************************************************
+23) Escreva um programa que exiba as seguintes opções e realize os que se pede em cada uma delas:
+1 – Adição
+2 – Subtração
+3 – Multiplicação
+4 – Divisão
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+   <h3>Exercício 23</h3>
+ <form name="calcform" method="post" action="">
+    <label for="valor1">Número 1:</label>
+    <input type="text" name="valor1" id="valor1" /><br><br>
+     
+    <label for="valor2">Número 2:</label>
+    <input type="text" name="valor2" id="valor2" /><br><br>
+     
+    <label for="oper">Selecione a operação:</label><br><br>
+        <select name="oper" id="oper">
+            <option value="somar">+</option>
+            <option value="subtrair">-</option>
+            <option value="multiplicar">*</option>
+            <option value="dividir">/</option>
+        </select>
+     
+    <label for="res">Resultado:</label>
+        <input type="text" name="res" id="res" />
+        <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcform.oper.value)"/>
+</form>
+<script>
+    function calcular(oper) {
+   var valor1 = document.calcform.valor1.value;
+   var valor2 = document.calcform.valor2.value;
+
+   if (oper == "somar") {
+      var res = parseInt(valor1) + parseInt(valor2);
+   } else {
+      if (oper == "subtrair") {
+         var res = valor1-valor2;
+      } else {
+         if (oper == "multiplicar") {
+            var res = valor1*valor2;
+         } else {
+            var res = valor1/valor2;
+         }
+      }
+   }
+
+   document.calcform.res.value = res;
+}
+
+</script>
+
+</body>
+</html>

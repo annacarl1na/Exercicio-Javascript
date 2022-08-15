@@ -1,0 +1,41 @@
+/*************************************************************************
+14) Escreva um programa que leia dois números e apresente a diferença do maior para o menor.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 14</h3>
+    <form name="FormExerc" action=" " method="post">
+        Número 1=  <input type="text" name="f_numb1" /><p></p>
+        Número 2=  <input type="text" name="f_numb2" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+    var n1 = parseInt(document.FormExerc.f_numb1.value);
+    var n2 = parseInt(document.FormExerc.f_numb2.value);
+    let maior, menor
+    var calculo = (maior - menor)
+    var t = "";
+        //processamento
+        if(n1>n2){
+             maior = n1;
+             menor = n2;
+             calculo =  n1 - n2;
+            }
+            else if(n2>n1){
+               maior = n2;
+               menor = n1;
+               calculo = n2 - n1; 
+            }
+            else{
+                "são iguais";
+            }
+        window.alert("A diferença do número MAIOR: "+ maior +" para o número MENOR: "+ menor + " É de: "+ calculo);
+    }
+</script>
+</body>
+</html>

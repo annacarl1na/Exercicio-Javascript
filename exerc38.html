@@ -1,0 +1,28 @@
+/*************************************************************************
+38) Faça um programa que leia as variáveis C e N, respectivamente código e número de horas trabalhadas de um
+operário. E calcule o salário sabendo-se que ele ganha R$ 10,00 por hora. Quando o número de horas exceder a
+50, calcule o excesso de pagamento armazenando-o na variável E, caso contrário zerar tal variável. A hora
+excedente de trabalho vale R$ 20,00. No final do processamento imprimir o salário total e o salário excedente. O
+programa só deve parar de rodar quando o usuário responder "S" na seguinte pergunta, "Deseja encerrar o
+programa?".
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+<h3>Exercício 38</h3>
+<script>
+    do{
+        codigo = window.prompt("Digite o código do operário: ");
+        n = window.prompt("Digite o número de horas trabalhadas: ");
+		e=0;
+		PrecoHora=10;
+		PrecoExcedente=PrecoHora*2;
+    if(n>50){
+	    e = n-50;
+	} window.alert("\nID: "+codigo+"\nSalario: "+(n*PrecoHora)+"\nSalario excedente: "+(e*PrecoExcedente)+"\nSalario total: "+(e*PrecoExcedente+n*PrecoHora));
+        var fim = window.confirm("Deseja encerrrar o programa?");
+	}while(fim == false);
+</script>
+</body>
+</html>

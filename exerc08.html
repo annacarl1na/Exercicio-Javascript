@@ -1,0 +1,35 @@
+/*************************************************************************
+8) Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula:
+V = 3.14159 * R * R * A
+Onde as variáveis: V, R e A representam respectivamente o volume, o raio e a altura.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 08</h3>
+    <form name="FormRaio" action=" " method="post">
+        Insira o Raio: <input type="text" name="f_raio" /><p></p>
+        Insira a Altura: <input type="text" name="f_altura" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+        var r = parseFloat(document.FormRaio.f_raio.value);
+        var a = parseFloat(document.FormRaio.f_altura.value);
+        
+
+       //processamento
+       var v = (3.14159*r*r*a).toFixed(2);
+        
+        //saída
+        window.alert("Volume da lata de óleo: " + v);
+
+        //consolo.log(estoquemedio);
+            
+        }     
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+/*************************************************************************
+11) Ler dois valores inteiros para as variáveis A e B, efetuar a troca dos valores de modo que a variável A passe a
+possuir o valor da variável B, e a variável B passe a possuir o valor da variável A. Apresentar os valores trocados.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 11</h3>
+    <form name="FormVal" action=" " method="post">
+        A =<input type="text" name="f_a" /><p></p>
+        B = <input type="text" name="f_b" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    
+    <script>
+        function executar(){   
+        //entrada
+
+        var a = parseInt(document.FormVal.f_a.value);
+        var b = parseInt(document.FormVal.f_b.value);
+       
+        //processamento 
+    var auxa = b;
+    var auxb = a;
+       //saída
+        window.alert(" Valor da letra 'A' passa a valer: " + auxa + "\n Valor da letra 'B' passa a valer: " + auxb);
+        //console.log(calculo);
+            
+        }     
+    </script>
+</body>
+</html>

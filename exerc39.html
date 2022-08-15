@@ -1,0 +1,30 @@
+/*************************************************************************
+39) Faça um programa que leia um número inteiro e mostre uma mensagem indicando se este número é par ou ímpar,
+e se é positivo ou negativo. O programa só deve parar de rodar quando o usuário responder "S" na seguinte
+pergunta, "Deseja encerrar o programa?" .
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+<h3>Exercício 39</h3> 
+<script>
+do{var a = parseInt(window.prompt('Digite um número inteiro: '));
+ if(a%2 ==0){
+    window.alert(a + "- Esse número é par \n");
+ }else{
+    window.alert(a + "- Esse número é impar\n");
+ }
+ if( a < 0){
+    window.alert(a + "- Esse número é negativo\n");
+ }else{ 
+    window.alert(a + "- Esse número é positivo\n");
+ } a = window.prompt("Deseja encerrar o programa? (s/n)")
+   if (a == 'S' || a == 's'){
+      alert('saindoooo');
+   }else{
+}
+}while(a == 'N' || a== 'n');
+</script>
+</body>
+</html>

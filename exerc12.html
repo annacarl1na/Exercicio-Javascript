@@ -1,0 +1,33 @@
+/*************************************************************************
+12) Escreva um programa que leia um número inteiro e exiba o seu módulo.
+O módulo de um número x é:
+x se x é maior ou igual a zero
+x * (-1) se x é menor que zero
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 12</h3>
+    <form name="FormModulo" action=" " method="post">
+        Insira um número inteiro: <input type="text" name="f_int" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    <script>
+        function executar(){   
+        //entrada
+        var x = parseInt(document.FormModulo.f_int.value);
+        var modulo = "";
+
+        //processamento
+        if (x => 0) {
+            modulo = x * (-1)
+        }else{
+            modulo = x};
+     //saída
+        window.alert("O modulo de " +  x + ' é ' + modulo);
+    }     
+    </script>
+</body>
+</html>
