@@ -1,0 +1,54 @@
+/*************************************************************************
+4) Ler quatro valores numéricos inteiros e apresentar o resultado dois a dois da adição e multiplicação entre os valores
+lidos, baseando-se na utilização do conceito de propriedade distributiva. Dica: se forem lidas as variáveisA, B, C e
+D, devem ser somados e multiplicados os valores de A com B, A com C e A com D; depois B com C, B com D e por
+último C com D. Note que para cada operação serão utilizadas seis combinações. Assim sendo, devem ser
+realizadas doze operações de processamento, sendo seis para as adições e seis para as multiplicações.
+*************************************************************************/
+<html>
+<head>
+</head>
+<body>
+    <h3>Exercício 04</h3>
+    <form name="FormDistri" action=" " method="post">
+        A: <input type="text" name="f_a" /><p></p>
+        B: <input type="text" name="f_b" /><p></p>
+        C: <input type="text" name="f_c" /><p></p>
+        D: <input type="text" name="f_d" /><p></p>
+        <input type="button" name="btn_executar" value="Executar" onclick="executar()" />
+        <input type="reset" name="btn_cancela" value="Cancelar" />
+    </form>
+    
+    <script>
+        function executar(){   
+        //entrada
+
+        var a = parseInt(document.FormDistri.f_a.value);
+        var b = parseInt(document.FormDistri.f_b.value);
+        var c = parseInt(document.FormDistri.f_c.value);
+        var d = parseInt(document.FormDistri.f_d.value);
+        
+        //calculo adição
+        var conta1 = ( a + b);
+        var conta2 = ( a + c);
+        var conta3 = ( a + d);
+        var conta4 = ( b + c);
+        var conta5 = ( b + d);
+        var conta6 = ( c + d); 
+        
+        //calculo multiplicação
+        var conta7 = ( a * b);
+        var conta8 = ( a * c);
+        var conta9 = ( a * d);
+        var conta10 = ( b * c);
+        var conta11 = ( b * d);
+        var conta12 = ( c * d);
+
+        //saída
+        window.alert("O resultado da conta 1 é: " + conta1 + "\n Conta2: " + conta2 + "\n Conta3" + conta3 + "\n Conta4: " + conta4 + "\n Conta5: " + conta5 + "\nConta6: " + conta6 + "\n Conta7:" + conta7 + "\n Conta8:" + conta8 + "\n Conta9: " + conta9 + "\n Conta10: " + conta10 + "\n Conta11: " + conta11 + "\n Conta12: " +conta12) ;
+        //console.log(calculo);
+            
+        }     
+    </script>
+</body>
+</html>
